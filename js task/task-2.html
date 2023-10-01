@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Task Two</title>
-  <link rel="stylesheet" href="../../asets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
        </div>
        <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
            <ol id="list" class="list-group p-2">
-               <li class="list-group-item">Task One</li>
+               <li id="lid" class="list-group-item">Task One</li>
            </ol>
        </div>
    </div>
@@ -30,6 +30,18 @@
 //Create a list element
 //Add it to the Ordered List
 
+var btn = document.getElementById(`btn`);
+var txt = document.getElementById(`txt`);
+var list = document.getElementById(`list`);
+
+
+btn.addEventListener("click",function (){
+
+    var item = document.createElement("li");
+    item.textContent = txt.value;
+    item.setAttribute("class","list-group-item");
+    list.append(item)
+});
 
 </script>
 </body>

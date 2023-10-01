@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Task One</title>
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
 </head>
 <body>
 <section class="container mt-3">
@@ -39,11 +39,17 @@
 
     const url = document.getElementById("url").value;
 
-    document.getElementById("img").style.backgroundSize='cover'
+    var img = document.getElementById("img")
+
+    img.style.backgroundSize='cover'
 
     // "url('assets/image/cart-1.jpg')";
 
-    document.getElementById("img").style.backgroundImage = "url("+ url + ")";
+    // `url('${document.querySelector("#url").value}')`;
+
+    // using  back tic ``
+    img.style.backgroundImage = `url(${url})`;
+
   });
 
   //Case One
