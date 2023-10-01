@@ -36,11 +36,11 @@ var list = document.getElementById(`list`);
 
 
 btn.addEventListener("click",function (){
-
     var item = document.createElement("li");
     item.textContent = txt.value;
     item.setAttribute("class","list-group-item");
     list.append(item)
+    txt.value="";
 });
 
 </script>
