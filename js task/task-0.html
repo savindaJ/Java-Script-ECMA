@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js - task</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<main>
+    <h1 id="h1ID">What is BOM & What is DOM</h1>
+    <h1 class="h1Class">What is BOM & What is DOM</h1>
+    <h2>What really JS DO?</h2>
+    <h2 id="set">What really JS DO?</h2>
+    <hr>
+    <input class="input" type="text" name="cusName" id="input">
+    <button class="btn btn-danger mt-3">Test</button>
+</main>
+<!--<script src="assets/js/js.js"></script>-->
+<script>
+    document.querySelector("h1").addEventListener("click", function () {
+        document.getElementById("h1ID").remove()
+    });
+    document.querySelector("button").addEventListener("click", function () {
+        document.getElementById("set").innerText = document.querySelector("input").value
+    });
+
+</script>
+</body>
+</html>

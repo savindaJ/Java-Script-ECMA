@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task One</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+<section class="container mt-3">
+  <section class="row">
+    <!--Case One-->
+    <div class="col">
+      <h1>Hello There How are you.?</h1>
+      <input id="txt" class="form-control" type="text" placeholder="Input Something">
+      <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
+    </div>
+
+    <!--Case Two-->
+    <div class="col">
+      <h1>Input an Image Url</h1>
+      <input id="url" class="form-control" type="url" placeholder="Input Image URL">
+      <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
+      <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+    </div>
+  </section>
+</section>
+<script>
+
+  document.getElementById("txt").addEventListener("keyup", function (){
+    document.querySelector("h1").innerText=document.getElementById("txt").value
+  });
+
+  document.getElementById("btn1").addEventListener("click",function (){
+    document.querySelector("h1").style.color='red'
+  });
+
+
+  document.getElementById("btn2").addEventListener("click",function (){
+
+    const url = document.getElementById("url").value;
+
+    document.getElementById("img").style.backgroundSize='cover'
+
+    // "url('assets/image/cart-1.jpg')";
+
+    document.getElementById("img").style.backgroundImage = "url("+ url + ")";
+  });
+
+  //Case One
+  //Bind an event for Change Text Btn
+  //Get Input Text Value
+  //Assign it to H1 text
+  //Change the color of h1 to red
+  //Change font size t0 4em
+
+
+  //Case Two
+  //Bind an event for Change Image Btn
+  //Get Input URL Value
+  //Assign it to the Image src
+
+
+
+
+</script>
+</body>
+</html>
