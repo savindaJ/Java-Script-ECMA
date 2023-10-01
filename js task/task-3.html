@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task Two</title>
-    <link rel="stylesheet" href="../../asets/css/bootstrap.css">
+    <title>Task Three</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
 </head>
 <body>
 
@@ -26,7 +26,44 @@
 
 
 <script>
+    var btnStrt = document.querySelector("#btnStart");
+    var btnStop = document.querySelector("#btnStop");
+    var btnMin = document.querySelector("#btnMinus");
+    var btnUp = document.querySelector("#btnIncrement");
+    var txt = document.querySelector("#txt");
+    var h1 = document.querySelector("#display");
 
+    let interval;
+
+    btnStrt.addEventListener("click", function () {
+        let currentNum = parseInt(txt.value);
+
+        if (currentNum === 0) {
+            interval = setInterval(function () {
+                let currentNum = h1.innerText;
+                h1.innerText = parseInt(currentNum) + 1;
+            }, 1000);
+        } else {
+            interval = setInterval(function () {
+                currentNum += 1;
+                h1.innerText = currentNum;
+            }, 1000);
+        }
+    });
+
+    btnStop.addEventListener("click", function () {
+        clearInterval(interval);
+    });
+
+    btnMin.addEventListener("click", function () {
+        clearInterval(interval)
+        h1.innerText = parseInt(h1.innerText) - 1;
+    });
+
+    btnUp.addEventListener("click", function () {
+        clearInterval(interval);
+        h1.innerText = parseInt(h1.innerText) + 1;
+    });
 
 </script>
 </body>
