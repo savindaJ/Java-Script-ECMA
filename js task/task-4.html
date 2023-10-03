@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>task-4</title>
+    <style>
+        main {
+            width: 50%;
+            height: 50vh;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        main div {
+            width: 150px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        main section {
+            display: flex;
+            position: relative;
+            left: 11vw;
+        }
+
+        main > div:last-child {
+            position: relative;
+            left: 44vw;
+        }
+
+        main > div:first-child {
+            background: red;
+        }
+
+        main > div:last-child {
+            background: blue;
+        }
+
+        main section > div:first-child {
+            background: yellowgreen;
+        }
+
+        main section > div:nth-child(2) {
+            background: deeppink;
+        }
+
+        main section > div:last-child {
+            background: black;
+        }
+
+    </style>
 </head>
 <body>
-
 <main>
-    <input type="text" name="name" id="txt-id">
+    <div></div>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <div></div>
 </main>
 
 <script>
@@ -20,14 +75,35 @@
         console.log(number);
     }, 500, number);*/
 
-let txt = document.getElementById("txt-id");
+    // let txt = document.getElementById("txt-id");
 
-/*
-txt.addEventListener("mouseenter" ,function (){
-    alert("mouse invoked !")
-});
-*/
+    /*
+    txt.addEventListener("mouseenter" ,function (){
+        alert("mouse invoked !")
+    });
+    */
 
+    //literal base array
+    var colors = ["red", "blue", "black", "white", "yellow"];
+
+    var name1 = colors[0];
+
+    console.log(name1);
+
+    //constructor base array
+    var names = new Array("kamal", "namal", "sunimal", "nimal");
+
+    name2 = names[3];
+
+    console.log(name2);
+
+    for (const i in names) {
+        console.log(i);
+    }
+
+    for (const name of names) {
+        console.log(name);
+    }
 
 
 </script>

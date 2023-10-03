@@ -35,32 +35,52 @@
 
     let interval;
 
+    let count = true;
+
     btnStrt.addEventListener("click", function () {
         let currentNum = parseInt(txt.value);
+        clearInterval(interval);
 
-        if (currentNum === 0) {
-            interval = setInterval(function () {
-                let currentNum = h1.innerText;
-                h1.innerText = parseInt(currentNum) + 1;
-            }, 1000);
-        } else {
+        if (currentNum == h1.innerText){
             interval = setInterval(function () {
                 currentNum += 1;
                 h1.innerText = currentNum;
-            }, 1000);
+            }, 500);
+        }else {
+            interval = setInterval(function () {
+                h1.innerText = parseInt(h1.innerText)+1;
+            }, 500);
         }
+
+        /* if (currentNum === 0) {
+             interval = setInterval(function () {
+                 let currentNum = h1.innerText;
+                 h1.innerText = parseInt(currentNum) + 1;
+             }, 500);
+
+         } else {
+
+             interval = setInterval(function () {
+                 currentNum += 1;
+                 h1.innerText = currentNum;
+             }, 500);
+         }*/
+
     });
 
     btnStop.addEventListener("click", function () {
+        count = true;
         clearInterval(interval);
     });
 
     btnMin.addEventListener("click", function () {
+        count = true;
         clearInterval(interval)
         h1.innerText = parseInt(h1.innerText) - 1;
     });
 
     btnUp.addEventListener("click", function () {
+        count = true;
         clearInterval(interval);
         h1.innerText = parseInt(h1.innerText) + 1;
     });
