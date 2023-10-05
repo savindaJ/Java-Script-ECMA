@@ -223,31 +223,103 @@
 <!--</body>-->
 <!--</html>-->
 
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Mouse Move Event</title>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Hello There..!</h1>-->
+
+<!--<script src="assets/jquary/code.jquery.com_jquery-3.7.1.min.js"></script>-->
+
+<!--<script>-->
+<!--    $(document).mousemove("mousemove", function (e){-->
+<!--        let posX = e.pageX;-->
+<!--        let posY = e.pageY;-->
+
+<!--        $(`h1`).css({-->
+<!--            width:`200px`,-->
+<!--            position:`relative`,-->
+<!--            "top": posY + "px",-->
+<!--            "left": posX + "px"-->
+<!--        });-->
+
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--
+
+typeof reg
+'object'
+reg.test('AAA');
+false
+reg.test('ssasasa');
+true
+reg.test('AAsA');
+false
+reg.test('AAAAA');
+false
+reg.test('ssA');
+false-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mouse Move Event</title>
-
+    <title>Validation with JS</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Hello There..!</h1>
+<section class="container mt-3">
+    <h1>Validations with JS</h1>
+    <p>Usage of RegEx Literals</p>
+    <div class="row mt-3">
+        <div class="col-5">
+            <input id="input" type="text" placeholder="Input ID C00-001" class="form-control">
+            <button id="btn" class="btn btn-danger mt-3" disabled="true">Save</button>
+        </div>
+    </div>
+</section>
+
 
 <script src="assets/jquary/code.jquery.com_jquery-3.7.1.min.js"></script>
 
 <script>
-    $(document).mousemove("mousemove", function (e){
-        let posX = e.pageX;
-        let posY = e.pageY;
+    //Regular Expressions
+    // so for validations we can use regex literals
+    let regEx=/[a-z]{2}/; // this is how to put a regular expression
 
-        $(`h1`).css({
-            width:`200px`,
-            position:`relative`,
-            "top": posY + "px",
-            "left": posX + "px"
-        });
+    $('#input').on('keyup',function (){
+        let s = $('#input').val();
+
+        if (s.length===7){
+            $('#input').css({
+                border: `1px solid green`
+            });
+            $(`#btn`).attr('disabled',false);
+        }else {
+            $('#input').css({
+                border: `1px solid red`
+
+            });
+            $(`#btn`).attr('disabled',true);
+        }
+
+        if (s.length===0){
+            $(`#btn`).attr('disabled',true);
+            $('#input').css({
+                border: `1px solid white`
+            });
+        }
 
     });
+
 </script>
 </body>
 </html>
