@@ -15,7 +15,18 @@
 
     <section>
         <h1>haai !</h1>
+        <input type="text" id="input">
     </section>
+
+    <ul>
+        <li>A</li>
+        <li>A</li>
+        <li>A</li>
+        <li>A</li>
+        <li>A</li>
+    </ul>
+
+    <button>Sample Test</button>
 </main>
 
 <script src="../assets/jquary/code.jquery.com_jquery-3.7.1.min.js"></script>
@@ -24,13 +35,50 @@
     // add Element name select element
     // add id,class,element and select element
 
-    $(`h1+h1`).css(`color`,`blue`);
+    // $(`h1+h1`).css(`color`,`blue`);
+    //
+    // $(`#java`).css(`color`,`red`);
+    //
+    // $(`.hello`).css(`color`,`pink`);
 
-    $(`#java`).css(`color`,`red`);
 
-    $(`.hello`).css(`color`,`pink`);
+    // change default selector symbol
 
-    $(`section > h1`).css('color',`green`);
+    /* let RS = jQuery.noConflict();
+
+     RS(`h1`)
+ */
+
+    // change css with literal base object
+
+    /*let style = {
+        color:`red`,
+        fontSize:'20px',
+        background:`orange`
+    }
+
+    $(`h1`).css(style);*/
+
+
+    // change singlw line
+
+    $(`h1`).css({
+        color: `red`,
+        background: `green`
+    });
+
+    // let text = $(`#java`).text(); get text
+    // let text = $(`#java`).text(`sample`); /*change text*/
+
+    // $(`input`).val(); get
+    // $(`input`).val(`test`); set
+
+
+    // $(`ul`).append(` <li>NEW</li>`); append
+
+    // $(`ul`).prepend(` <li>NEW</li>`); prepend
+
+
 
 </script>
 
