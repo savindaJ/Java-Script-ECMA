@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+</head>
+<body>
+
+<main>
+    <h1>hello Jquery</h1>
+    <h1 class="hello">hello There</h1>
+    <h1 id="java">hello JAVA</h1>
+    <h1>hello JS</h1>
+
+    <section>
+        <h1>haai !</h1>
+    </section>
+</main>
+
+<script src="../assets/jquary/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<script>
+    // add Element name select element
+    // add id,class,element and select element
+
+    $(`h1+h1`).css(`color`,`blue`);
+
+    $(`#java`).css(`color`,`red`);
+
+    $(`.hello`).css(`color`,`pink`);
+
+    $(`section > h1`).css('color',`green`);
+
+</script>
+
+</body>
+</html>

@@ -97,13 +97,37 @@
 
     console.log(name2);
 
+    //for in
+    // ToDo : get indexes in array value count
     for (const i in names) {
         console.log(i);
     }
 
+    //for of
+    //ToDo : one by one get values
     for (const name of names) {
         console.log(name);
     }
+
+    //ToDo : for rach in get one by one values
+    //ToDo : Call back function
+    //ToDo : function invoked in one by one values
+    colors.forEach(function (i){
+        console.log(i);
+    });
+
+    //ToDo last index added to value
+    colors.push("ddddd");
+
+    //Todo remove last value
+    colors.pop();
+
+    //ToDo add first index to add value
+    colors.unshift("dddd");
+
+    colors.forEach(function (i){
+        console.log(i);
+    });
 
 
 </script>
