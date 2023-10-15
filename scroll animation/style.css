@@ -1,0 +1,12 @@
+/* styles.css */
+.scroll-animation {
+    width: 100px;
+    height: 100vh;
+    background-color: blue;
+    transform: translateY(100px);
+    transition: transform 0.5s ease;
+}
+
+.scroll-animation.active {
+    transform: translateY(100);
+}
